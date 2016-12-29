@@ -42,7 +42,7 @@ def setup(hass, config):
 
     global INSTEON
 
-    INSTEON = Hub(ip, username, password, port, logging=None)
+    INSTEON = Hub(ip, username, password, port, logger=_LOGGER)
 
     if INSTEON is None:
         _LOGGER.error("Could not connect to Insteon service")
